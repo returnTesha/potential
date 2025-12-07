@@ -7,81 +7,83 @@ import {
   useEdgesState,
   Background,
   Controls,
-  Position, // 👈 선을 옆으로 연결하기 위해 추가했습니다.
+  Position,
 } from '@xyflow/react';
 
 import '@xyflow/react/dist/style.css';
-import '@/styles/xy-theme.css';
+// import '@/styles/xy-theme.css'; // ⚠️ Turbo 모드에서는 기본 테마 CSS가 방해될 수 있어 주석 처리하거나 빼는 게 낫습니다.
 
 import AnimatedSVGEdge from './animated_svg_edge';
+import TurboNode from './turbo-node'; // 👈 방금 만든 노드 가져오기
 
-// 1. 노드 정의 (좌 -> 우 배치)
-const initialNodes = [
-  // [1단계] 가장 왼쪽: IDC
-  {
-    id: 'dms',
-    type: 'input', // 시작점
-    sourcePosition: Position.Right, // 오른쪽으로 선이 나감
-    position: { x: 0, y: 0 },
-    data: { label: 'DMS' },
-  },
-
-  // [2단계] 중간: 서버 (222.122.47.46)
-  {
-    id: 'server',
-    sourcePosition: Position.Right, // 오른쪽으로 선이 나감
-    targetPosition: Position.Left,  // 왼쪽에서 선을 받음
-    position: { x: 300, y: 0 },     // X축 300 이동
-    data: { label: '222.122.47.46' },
-  },
-
-  // [3단계] 가장 오른쪽: DB 4개 (Y축으로 펼침)
-  {
-    id: 'oracle19',
-    targetPosition: Position.Left, // 왼쪽에서 선을 받음
-    position: { x: 650, y: -150 }, // 위로
-    data: { label: 'Oracle 19c' },
-  },
-  {
-    id: 'oracle11',
-    targetPosition: Position.Left,
-    position: { x: 650, y: -50 },
-    data: { label: 'Oracle 11g' },
-  },
-  {
-    id: 'postgres',
-    targetPosition: Position.Left,
-    position: { x: 650, y: 50 },
-    data: { label: 'Postgresql 16.3' },
-  },
-  {
-    id: 'mariadb',
-    targetPosition: Position.Left,
-    position: { x: 650, y: 150 }, // 아래로
-    data: { label: 'MariaDB' },
-  },
-];
+// 1. 노드 타입 등록
+const nodeTypes = {
+  turbo: TurboNode,
+};
 
 const edgeTypes = {
   animatedSvg: AnimatedSVGEdge,
 };
 
-// 2. 엣지 연결 (IDC -> Server -> DBs)
-const initialEdges = [
-  // IDC -> Server
+// 2. 노드 데이터 (Turbo 스타일로 데이터 구조 변경: title, subline, icon)
+const initialNodes = [
+  // [DMS]
   {
-    id: 'e-dms-server',
-    source: 'dms',
-    target: 'server',
-    type: 'animatedSvg',
-    animated: true
+    id: 'dms',
+    type: 'turbo', // 👈 타입을 'turbo'로 지정
+    position: { x: 0, y: 0 },
+    data: {
+      icon: 'globe',
+      title: 'DMS',
+      subline: 'Data Management System'
+    },
   },
 
-  // Server -> DBs
-  { id: 'e-server-ora19', source: 'server', target: 'oracle19', type: 'animatedSvg', animated: true },
-  { id: 'e-server-ora11', source: 'server', target: 'oracle11', type: 'animatedSvg', animated: true },
-  { id: 'e-server-pg',    source: 'server', target: 'postgres', type: 'animatedSvg', animated: true },
-  { id: 'e-server-maria', source: 'server', target: 'mariadb',  type: 'animatedSvg', animated: true },
+  // [Server]
+  {
+    id: 'server',
+    type: 'turbo',
+    position: { x: 350, y: 0 },
+    data: {
+      icon: 'server',
+      title: 'IDC46 Server',
+      subline: '222.122.47.46'
+    },
+  },
+
+  // [DBs]
+  {
+    id: 'oracle19',
+    type: 'turbo',
+    position: { x: 750, y: -180 },
+    data: { icon: 'database', title: 'Oracle 19c', subline: 'Main DB Cluster' },
+  },
+  {
+    id: 'oracle11',
+    type: 'turbo',
+    position: { x: 750, y: -60 },
+    data: { icon: 'database', title: 'Oracle 11g', subline: 'Legacy System' },
+  },
+  {
+    id: 'postgres',
+    type: 'turbo',
+    position: { x: 750, y: 60 },
+    data: { icon: 'cloud', title: 'PostgreSQL', subline: 'v16.3 / Analytics' },
+  },
+  {
+    id: 'mariadb',
+    type: 'turbo',
+    position: { x: 750, y: 180 },
+    data: { icon: 'database', title: 'MariaDB', subline: 'Web Service DB' },
+  },
+];
+
+const initialEdges = [
+  { id: 'e1', source: 'dms', target: 'server', type: 'animatedSvg', animated: true },
+  { id: 'e2', source: 'server', target: 'oracle19', type: 'animatedSvg', animated: true },
+  { id: 'e3', source: 'server', target: 'oracle11', type: 'animatedSvg', animated: true },
+  { id: 'e4', source: 'server', target: 'postgres', type: 'animatedSvg', animated: true },
+  { id: 'e5', source: 'server', target: 'mariadb', type: 'animatedSvg', animated: true },
 ];
 
 const EdgesFlow = () => {
@@ -89,18 +91,20 @@ const EdgesFlow = () => {
   const [edges, , onEdgesChange] = useEdgesState(initialEdges);
 
   return (
-    // 높이(height)를 반드시 지정해야 화면에 보입니다.
-    <div style={{ width: '100%', height: '500px', border: '1px solid #ddd', borderRadius: '8px' }}>
+    // 3. 배경색을 짙은 남색(#1A192B)으로 설정하여 Turbo 느낌 내기
+    <div style={{ width: '100%', height: '600px', background: '#1A192B', borderRadius: '8px' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
+        nodeTypes={nodeTypes} // 👈 등록 필수
         edgeTypes={edgeTypes}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        fitView // 시작할 때 그래프 전체가 보이도록 자동 줌
+        fitView
       >
-        <Background />
-        <Controls /> {/* 확대/축소 버튼 추가 */}
+        {/* 배경 패턴 색상을 어두운 테마에 맞춰 변경 */}
+        <Background color="#444" gap={20} />
+        <Controls style={{ fill: 'white' }} /> {/* 컨트롤 버튼도 보이게 */}
       </ReactFlow>
     </div>
   );

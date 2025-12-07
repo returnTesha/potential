@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45caf1b2-0519-4778-8cfc-7ba978cc8296" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_svg_edge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/apps/v4/styles/xy-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/turbo-node.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/site-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +124,7 @@
       <updated>1765109083436</updated>
       <workItem from="1765109096417" duration="3058000" />
       <workItem from="1765112278338" duration="88000" />
-      <workItem from="1765114569912" duration="3794000" />
+      <workItem from="1765114569912" duration="4271000" />
     </task>
     <servers />
   </component>
