@@ -53,37 +53,37 @@ const initialNodes = [
 
   // [DBs]
   {
-    id: 'oracle19',
+    id: 'oracle19c',
     type: 'turbo',
     position: { x: 750, y: -180 },
-    data: { icon: 'database', title: 'Oracle 19c', subline: 'Main DB Cluster' },
+    data: { icon: 'database', title: 'Oracle 19c', subline: 'v19c / Development' },
   },
   {
-    id: 'oracle11',
+    id: 'oracle11g',
     type: 'turbo',
     position: { x: 750, y: -60 },
-    data: { icon: 'database', title: 'Oracle 11g', subline: 'Legacy System' },
+    data: { icon: 'database', title: 'Oracle 11g', subline: 'v11g / Development' },
   },
   {
-    id: 'postgres',
+    id: 'postgres16.3',
     type: 'turbo',
     position: { x: 750, y: 60 },
-    data: { icon: 'cloud', title: 'PostgreSQL', subline: 'v16.3 / Analytics' },
+    data: { icon: 'database', title: 'PostgreSQL', subline: 'v16.3 / Development' },
   },
   {
-    id: 'mariadb',
+    id: 'mariadb10.11',
     type: 'turbo',
     position: { x: 750, y: 180 },
-    data: { icon: 'database', title: 'MariaDB', subline: 'Web Service DB' },
+    data: { icon: 'database', title: 'MariaDB', subline: 'v10.11 / Development' },
   },
 ];
 
 const initialEdges = [
   { id: 'e1', source: 'dms', target: 'server', type: 'animatedSvg', animated: true },
-  { id: 'e2', source: 'server', target: 'oracle19', type: 'animatedSvg', animated: true },
-  { id: 'e3', source: 'server', target: 'oracle11', type: 'animatedSvg', animated: true },
-  { id: 'e4', source: 'server', target: 'postgres', type: 'animatedSvg', animated: true },
-  { id: 'e5', source: 'server', target: 'mariadb', type: 'animatedSvg', animated: true },
+  { id: 'e2', source: 'server', target: 'oracle19c', type: 'animatedSvg', animated: true },
+  { id: 'e3', source: 'server', target: 'oracle11g', type: 'animatedSvg', animated: true },
+  { id: 'e4', source: 'server', target: 'postgres16.3', type: 'animatedSvg', animated: true },
+  { id: 'e5', source: 'server', target: 'mariadb10.11', type: 'animatedSvg', animated: true },
 ];
 
 const EdgesFlow = () => {

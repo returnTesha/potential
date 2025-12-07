@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45caf1b2-0519-4778-8cfc-7ba978cc8296" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/turbo-node.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" afterDir="false" />
     </list>
@@ -124,7 +123,7 @@
       <updated>1765109083436</updated>
       <workItem from="1765109096417" duration="3058000" />
       <workItem from="1765112278338" duration="88000" />
-      <workItem from="1765114569912" duration="4271000" />
+      <workItem from="1765114569912" duration="4602000" />
     </task>
     <servers />
   </component>
