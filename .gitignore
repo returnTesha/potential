@@ -1,0 +1,7 @@
+# Go 관련 (DMS 프로젝트)
+backend/go/DMS
+backend/go/config/config.dev.toml
+backend/go/config/config.prod.toml
+!backend/go/config/config.example.toml
+backend/go/tmp/
+backend/go/*.log

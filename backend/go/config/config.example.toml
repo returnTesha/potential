@@ -1,0 +1,26 @@
+# DMS 설정 파일 예시
+# 실제 사용 시 config.dev.toml 또는 config.prod.toml로 복사하세요
+
+[server]
+port = "8080"
+shutdown_timeout = "5s"
+allowed_origins = [
+  "http://localhost:4000",
+  "https://yourdomain.com",
+]
+
+[[databases]]
+id = "your-host:P_dbname"
+name = "your_database_name"
+type = "postgresql"  # postgresql, oracle19c, mariadb
+host = "your-host"
+port = 5432
+username = "your-username"
+password = "your-password"
+schema = ""
+connect_on_startup = true
+connection_timeout = "60s"
+
+[logging]
+level = "info"
+prefix = "[DMS]"

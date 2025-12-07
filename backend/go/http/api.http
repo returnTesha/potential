@@ -1,0 +1,21 @@
+###health check
+GET localhost:8080/health
+
+###check database
+GET localhost:8080/api/dms/v1/databases
+
+###execute  query
+POST localhost:8080/api/dms/v1/databases/222.122.47.46:postgresql16.3:careerpass/query
+Content-Type: application/json
+
+{
+  "query": "select version()"
+}
+
+###execute  query
+POST localhost:8080/api/dms/v1/databases/222.122.47.46:oracle19c:standard_linc/query
+Content-Type: application/json
+
+{
+  "query": "SELECT VERSION, STATUS, HOST_NAME, INSTANCE_NAME FROM V$INSTANCE"
+}
