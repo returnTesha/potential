@@ -7,13 +7,14 @@ import {
 import { AppSidebar } from "@/app/(app)/main/dashboard/components/app-sidebar"
 import { ChartAreaInteractive } from "@/app/(app)/main/dashboard/components/chart-area-interactive"
 import { DataTable } from "@/app/(app)/main/dashboard/components/data-table"
-import { SectionCards } from "@/app/(app)/main/dashboard/components/section-cards"
+import { SectionCards }  from "@/app/(app)/main/dashboard/components/section-cards"
 import { SiteHeader } from "@/app/(app)/main/dashboard/components/site-header"
 
 import data from "./data.json"
 import {ExamplesNav} from "@/components/examples-nav";
 import {ThemeSelector} from "@/components/theme-selector";
 import {PageNav} from "@/components/page-nav";
+import EdgesFlow  from "@/app/(app)/main/dashboard/components/animated_test"
 
 export default function Page() {
   return (
@@ -51,7 +52,9 @@ export default function Page() {
           <div className="flex flex-1 flex-col">
             <div className="@container/main flex flex-1 flex-col gap-2">
               <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-                <SectionCards />
+                {/*<SectionCards />*/}
+                {/*TODO react flow make here it.*/}
+                <EdgesFlow />
                 <div className="px-4 lg:px-6">
                   <ChartAreaInteractive />
                 </div>
