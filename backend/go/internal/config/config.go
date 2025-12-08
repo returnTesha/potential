@@ -99,11 +99,13 @@ func (d *DatabaseConfig) ToDomain() (*domain.Database, error) {
 	// type 문자열을 domain.DatabaseType으로 변환
 	var dbType domain.DatabaseType
 	switch d.Type {
-	case "postgresql":
+	case "postgresql16.3":
 		dbType = domain.PostgreSQL
 	case "oracle19c":
 		dbType = domain.Oracle19c
-	case "mariadb":
+	case "oracle11g":
+		dbType = domain.Oracle11g
+	case "mariadb10.11":
 		dbType = domain.MariaDB
 	default:
 		return nil, fmt.Errorf("unsupported database type: %s", d.Type)

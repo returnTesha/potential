@@ -1,0 +1,18 @@
+{
+  "columns": [
+    "VERSION",
+    "STATUS",
+    "HOST_NAME",
+    "INSTANCE_NAME"
+  ],
+  "rows": [
+    {
+      "HOST_NAME": "3d6cdeace5b1",
+      "INSTANCE_NAME": "ORACLE",
+      "STATUS": "OPEN",
+      "VERSION": "19.0.0.0.0"
+    }
+  ],
+  "row_count": 1,
+  "execution_time": "10.383628ms"
+}

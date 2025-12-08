@@ -1,0 +1,90 @@
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:postgresql16.3:careerpass/query
+Content-Type: application/json
+Content-Length: 33
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "select version()"
+}
+
+<> 2025-12-08T213625.200.json
+
+###
+
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:oracle19c:standard_linc/query
+Content-Type: application/json
+Content-Length: 81
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "SELECT VERSION, STATUS, HOST_NAME, INSTANCE_NAME FROM V$INSTANCE"
+}
+
+<> 2025-12-08T213621.200.json
+
+###
+
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:oracle19c:standard_linc/query
+Content-Type: application/json
+Content-Length: 81
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "SELECT VERSION, STATUS, HOST_NAME, INSTANCE_NAME FROM V$INSTANCE"
+}
+
+<> 2025-12-08T213216.200.json
+
+###
+
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:postgresql16.3:careerpass/query
+Content-Type: application/json
+Content-Length: 33
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "select version()"
+}
+
+<> 2025-12-08T213213.200.json
+
+###
+
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:postgresql16.3:careerpass/query
+Content-Type: application/json
+Content-Length: 33
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "select version()"
+}
+
+<> 2025-12-08T213212.200.json
+
+###
+
+POST http://localhost:8080/api/dms/v1/databases/222.122.47.46:postgresql16.3:careerpass/query
+Content-Type: application/json
+Content-Length: 33
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "query": "select version()"
+}
+
+<> 2025-12-08T213131.503.json
+
+###
+

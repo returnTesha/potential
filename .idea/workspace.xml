@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45caf1b2-0519-4778-8cfc-7ba978cc8296" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/animated_test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/go/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go/internal/config/config.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -27,15 +31,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.api | execute  query#1.executor": "Run",
+    "HTTP Request.api | execute  query#2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/cheloniaMD/workspace/doit/potential",
+    "last_opened_file_path": "/Users/cheloniaMD/workspace/doit/potential/backend/go/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,12 +60,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/go/config" />
       <recent name="$PROJECT_DIR$/apps/v4/app/(app)/main/dashboard" />
       <recent name="$PROJECT_DIR$/apps/v4/app/(app)/main" />
       <recent name="$PROJECT_DIR$/apps/v4/app/(main)" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="HTTP Request.api | execute  query#1">
+    <configuration name="api | execute  query#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/go/http/api.http" index="3" requestIdentifier="execute  query#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="api | execute  query#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/go/http/api.http" index="4" requestIdentifier="execute  query#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tinyGoConfigurationId" factoryName="tinyGoFactoryIdbuild">
       <module name="ui" />
       <working_directory value="$PROJECT_DIR$" />
@@ -104,6 +118,12 @@
       <tinygo_output_path value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.api | execute  query#1" />
+        <item itemvalue="HTTP Request.api | execute  query#2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -123,7 +143,10 @@
       <updated>1765109083436</updated>
       <workItem from="1765109096417" duration="3058000" />
       <workItem from="1765112278338" duration="88000" />
-      <workItem from="1765114569912" duration="4602000" />
+      <workItem from="1765114569912" duration="5298000" />
+      <workItem from="1765150112824" duration="52000" />
+      <workItem from="1765161706804" duration="5225000" />
+      <workItem from="1765188602665" duration="2973000" />
     </task>
     <servers />
   </component>
@@ -150,7 +173,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/apps/v4/app/(app)/main/dashboard/components/section-cards.tsx</url>
           <line>80</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
